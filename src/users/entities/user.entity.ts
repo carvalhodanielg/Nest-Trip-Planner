@@ -33,6 +33,9 @@ export class User {
   @Exclude({ toPlainOnly: true })
   password: string;
 
+  @Column({ default: 'My bio.' })
+  bio: string;
+
   @Column()
   birthDate: Date;
 
