@@ -1,3 +1,13 @@
+#Custom Readme.init
+
+Run migrations
+`npm run migration:run`
+
+Create migratin:
+`npm run migration:create --name=your_migration_name`
+
+#Custom Readme.end
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>

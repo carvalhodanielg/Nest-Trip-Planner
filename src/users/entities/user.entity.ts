@@ -33,15 +33,15 @@ export class User {
   @Exclude({ toPlainOnly: true })
   password: string;
 
-  @Column({ default: 'My bio.' })
-  bio: string;
-
   @Column()
   birthDate: Date;
 
   @OneToMany(() => Todo, (todo) => todo.user)
   @JoinColumn()
   todos: Todo[];
+
+  @Column({ default: 'my f bio.' })
+  bionic: string;
 
   @CreateDateColumn()
   createdAt: Timestamp;
