@@ -51,7 +51,9 @@ export class AuthService {
   }
 
   async validateUser(payloadEmail: string, payloadPassword: string) {
-    const user = await this.usersService.findByEmail(payloadEmail);
+    const user = await this.usersService.findByEmail(
+      payloadEmail.toLowerCase(),
+    );
 
     if (!user) {
       throw new BadRequestException('User not found.');

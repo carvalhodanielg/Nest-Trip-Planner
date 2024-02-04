@@ -1,6 +1,7 @@
 import { Exclude } from 'class-transformer';
 import { Todo } from 'src/todos/entities/todo.entity';
 import {
+  BeforeInsert,
   Column,
   CreateDateColumn,
   Entity,
@@ -13,6 +14,12 @@ import {
 
 @Entity()
 export class User {
+  @BeforeInsert()
+  emailToLowerCase() {
+    this.email = this.email.toLowerCase();
+    console.log('this', this.email);
+  }
+
   @PrimaryGeneratedColumn()
   id: number;
 

@@ -22,6 +22,8 @@ import { JwtAuthGuard } from './auth/jwt-auth.guard';
       password: 'postgres',
       database: 'postgres',
       entities: [User, Todo],
+      migrations: ['./src/migrations'],
+      migrationsTableName: 'custom_migration_table',
       synchronize: true,
       autoLoadEntities: true,
     }),

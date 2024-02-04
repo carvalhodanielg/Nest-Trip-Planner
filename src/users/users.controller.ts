@@ -27,8 +27,6 @@ export class UsersController {
   }
 
   @Get()
-  // @Roles(Role.Admin)
-  // @Public()
   findAll() {
     return this.usersService.findAll();
   }
